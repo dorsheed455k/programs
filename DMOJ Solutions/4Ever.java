@@ -22,7 +22,7 @@ public class Main {
 
         do {
             n = convert(n).length();
-            System.out.println(n + ": " + convert(n));
+            System.out.println(n);
         } while (n != 4);
 
     }
