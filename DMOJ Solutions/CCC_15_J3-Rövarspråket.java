@@ -9,8 +9,6 @@ public class Rövarspråket {
     public static void main(String[] args) throws IOException {
 
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-
-
         String str = in.readLine();
         StringBuilder sb = new StringBuilder();
 
@@ -23,7 +21,6 @@ public class Rövarspråket {
               sb.append(str.charAt(i));
           }
         }
-
         System.out.println(sb.toString());
     }
 
@@ -51,7 +48,7 @@ public class Rövarspråket {
                 System.out.println((char) cons);
             }
         } while (cons == 'a' || cons == 'e' || cons == 'i' || cons == 'o' || cons == 'u');
-
+        
         return String.valueOf((char)cons);
     }
 }
