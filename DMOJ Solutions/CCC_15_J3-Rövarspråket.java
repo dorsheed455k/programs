@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class Rövarspråket {
 
-    static String[] vowels = {"a", "e", "i", "o", "u"};
+    static char[] vowels = {'a', 'e', 'i', 'o', 'u'};
 
     public static void main(String[] args) throws IOException {
 
@@ -29,10 +29,10 @@ public class Rövarspråket {
         String nextVowel = "";
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < dis.length; i++) {
-            dis[i] = Math.abs(c - vowels[i].charAt(0));
+            dis[i] = Math.abs(c - vowels[i]);
             if(dis[i] < min) {
                 min = dis[i];
-                nextVowel = vowels[i];
+                nextVowel = String.valueOf(vowels[i]);
             }
         }
         return nextVowel;
