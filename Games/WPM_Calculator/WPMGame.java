@@ -21,11 +21,8 @@ public class WPMGame {
 
     public WPMGame() throws InterruptedException {
         Scanner in = new Scanner(System.in);
-
-        System.out.println("======================================================================================");
+        
         titleBanner();
-        System.out.println("======================================================================================");
-
         Thread.sleep(2000);
 
         System.out.print("Objective: This program allows you to test the number of words\n" +
@@ -103,7 +100,9 @@ public class WPMGame {
                      "      \\ \\     /   \\ \\      /        |  ||             |   | | \\     /   |   | |    |    /\\  |   |    |  | |     /\\   |   |  |  |_|\n" +
                      "       \\_\\___/     \\_\\____/         |__|/             |___|/   \\___/    |___|/     |__ /--\\ |__ |__  |__| |__  /--\\  |   |__|  |\\\n";
 
+        System.out.println("======================================================================================");
         System.out.println(asciGreen + wpm + asciReset);
+        System.out.println("======================================================================================");
     }
 
     public static void countDown() throws InterruptedException {
