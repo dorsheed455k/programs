@@ -20,11 +20,7 @@ public class AssigningPartner {
             partners[i] +=  b[i];
         }
 
-        if(are_Partners(partners, n)) {
-            System.out.println("good");
-        } else {
-            System.out.println("bad");
-        }
+        System.out.println(are_Partners(partners, n)? "good" : "bad");
     }
 
     public static boolean are_Partners(String[] p, int n) {
