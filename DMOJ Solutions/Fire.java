@@ -36,14 +36,11 @@ public class Fire {
             if (s[i] < min) {
                 min = s[i];
             }
-            System.out.print(s[i] + " ");
         }
-
         System.out.println(min);
     }
 
     public static void sortArr(int[] s, int n) {
-
         for (int i = 0; i < n; i++) {
             int temp;
             for (int j = i+1;j < n; j++) {
