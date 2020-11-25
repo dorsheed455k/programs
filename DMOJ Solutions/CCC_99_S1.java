@@ -1,7 +1,6 @@
 /*
  CCC'99 S1 - Card Game
 */
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,12 +10,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        int total = 1;
         String[] moves = new String[52];
         int i = 0;
-        while (total <= 52) {
+        while (i < 52) {
             moves[i] = in.readLine();
-            total++;
             i++;
         }
         int aPoints = 0;
