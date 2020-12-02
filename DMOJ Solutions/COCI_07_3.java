@@ -1,3 +1,7 @@
+/*
+  COCI '07 Contest 3 #3 - Tajna 
+*/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
