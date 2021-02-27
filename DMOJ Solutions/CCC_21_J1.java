@@ -1,12 +1,12 @@
 /*
-  CCC_21_J3 - Boiling Water
+  CCC '21 J1 - Boiling Water
 */
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CCC_21_J3 {
+public class CCC_21_J1 {
 
     public static void main(String[] args) throws IOException {
 
