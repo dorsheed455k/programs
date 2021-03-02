@@ -1,3 +1,7 @@
+/*
+   COCI '15 Contest 1 #3 Baloni
+*/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
