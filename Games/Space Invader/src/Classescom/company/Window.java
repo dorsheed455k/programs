@@ -19,7 +19,7 @@ public class Window extends Canvas  {
         frame.setLocationRelativeTo(null);
         frame.setFocusable(true);
         frame.addKeyListener(main);
-        frame.setIconImage(ImageIO.read(new File("pixel_ship_yellow.png")));
+        frame.setIconImage(ImageIO.read(new File("img/pixel_ship_yellow.png")));
         setFocusTraversalKeysEnabled(true);
         frame.add(main);
         frame.setVisible(true);
