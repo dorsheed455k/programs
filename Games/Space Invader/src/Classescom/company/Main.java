@@ -18,17 +18,17 @@ public class Main extends Canvas implements KeyListener, ActionListener   {
     private boolean launch1 = false;
     private boolean launch2 = false;
     private boolean launch3 = false;
-    private Image BACK = new ImageIcon("background-black.png").getImage();
+    private Image BACK = new ImageIcon("img/background-black.png").getImage();
     private BufferedImage YELLOW_Ship;
     private BufferedImage[] Enemy = {
-            crop.trimImage(ImageIO.read(new File("pixel_ship_red_small.png"))),
-            crop.trimImage(ImageIO.read(new File("pixel_ship_blue_small.png"))),
-            crop.trimImage(ImageIO.read(new File("pixel_ship_green_small.png")))
+            crop.trimImage(ImageIO.read(new File("img/pixel_ship_red_small.png"))),
+            crop.trimImage(ImageIO.read(new File("img/pixel_ship_blue_small.png"))),
+            crop.trimImage(ImageIO.read(new File("img/pixel_ship_green_small.png")))
             };
     private BufferedImage EXPLOSION, Player_LASER, Red_LASER, Blue_LASER, Green_LASER;
-    private BufferedImage rightKey = ImageIO.read(new File("keyboard_key_right.png"));
-    private BufferedImage leftKey = ImageIO.read(new File("keyboard_key_left.png"));
-    private BufferedImage spaceBarKey = ImageIO.read(new File("spaceBar.png"));
+    private BufferedImage rightKey = ImageIO.read(new File("img/keyboard_key_right.png"));
+    private BufferedImage leftKey = ImageIO.read(new File("img/keyboard_key_left.png"));
+    private BufferedImage spaceBarKey = ImageIO.read(new File("img/spaceBar.png"));
     private int x;
     private int y;
     private int[] ey = new int[3];
@@ -42,7 +42,7 @@ public class Main extends Canvas implements KeyListener, ActionListener   {
     Main() throws IOException
     {
         new Window(WIDTH, HEIGHT, "Space Invaders", this);
-        YELLOW_Ship = crop.trimImage(ImageIO.read(new File("pixel_ship_yellow.png")));
+        YELLOW_Ship = crop.trimImage(ImageIO.read(new File("img/pixel_ship_yellow.png")));
         x = WIDTH / 2 - 50;
         y = HEIGHT - YELLOW_Ship.getHeight() - 100;
      }
@@ -238,7 +238,7 @@ public class Main extends Canvas implements KeyListener, ActionListener   {
                 if (Player_LASER == null) {
                     readytoFire = true;
                     try {
-                        Player_LASER = crop.trimImage(ImageIO.read(new File("pixel_laser_yellow.png")));
+                        Player_LASER = crop.trimImage(ImageIO.read(new File("img/pixel_laser_yellow.png")));
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }
@@ -297,7 +297,7 @@ public class Main extends Canvas implements KeyListener, ActionListener   {
               if (EXPLOSION == null) {
                   points += 5;
                   collide = true;
-                  EXPLOSION = crop.trimImage(ImageIO.read(new File("pixel_Explosion2.png")));
+                  EXPLOSION = crop.trimImage(ImageIO.read(new File("img/pixel_Explosion2.png")));
                   explode = true;
                   yPosition[i] = yRandPosition() - 100;
                   switch (xPosition[i]) {
@@ -323,7 +323,7 @@ public class Main extends Canvas implements KeyListener, ActionListener   {
       if (yPosition[0] >= (Math.random() * 400) + 1 && yPosition[0] <= 550) {
           boolean enemyFire1 = true;
           if (Red_LASER == null) {
-              Red_LASER = crop.trimImage(ImageIO.read(new File("pixel_laser_red.png")));
+              Red_LASER = crop.trimImage(ImageIO.read(new File("img/pixel_laser_red.png")));
               ey[0] = yPosition[0];
               ex[0] = xPosition[0] + lsx[0];
               launch1 = true;
@@ -342,7 +342,7 @@ public class Main extends Canvas implements KeyListener, ActionListener   {
         if (yPosition[1] >= (Math.random() * 400) + 50 && yPosition[1] <= 550) {
             boolean enemyFire2 = true;
             if (Blue_LASER == null) {
-                Blue_LASER = crop.trimImage(ImageIO.read(new File("pixel_laser_blue.png")));
+                Blue_LASER = crop.trimImage(ImageIO.read(new File("img/pixel_laser_blue.png")));
                 ey[1] = yPosition[1];
                 ex[1] = xPosition[1] + lsx[1];
                 launch2 = true;
@@ -359,7 +359,7 @@ public class Main extends Canvas implements KeyListener, ActionListener   {
       if (yPosition[2] >= (Math.random() * 400) + 50 && yPosition[2] <= 550) {
           boolean enemyFire3 = true;
           if (Green_LASER == null) {
-              Green_LASER = crop.trimImage(ImageIO.read(new File("pixel_laser_green.png")));
+              Green_LASER = crop.trimImage(ImageIO.read(new File("img/pixel_laser_green.png")));
               ey[2] = yPosition[2];
               ex[2] = xPosition[2] + lsx[2];
               launch3 = true;
@@ -406,7 +406,7 @@ public class Main extends Canvas implements KeyListener, ActionListener   {
         for (int i = 0; i < yPosition.length; i++) {
             by = y;
             bx = x;
-            EXPLOSION = crop.trimImage(ImageIO.read(new File("pixel_Explosion2.png")));
+            EXPLOSION = crop.trimImage(ImageIO.read(new File("img/pixel_Explosion2.png")));
             Thread.sleep(100);
             EXPLOSION = null;
             t.stop();
