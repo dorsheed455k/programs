@@ -1,3 +1,5 @@
+
+
 class Circle {
     int x, y;
     int r;
@@ -18,3 +20,4 @@ class Circle {
         g.setColor(cl);
         g.fillOval(x, y, r, r);
     }
+}
